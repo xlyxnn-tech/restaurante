@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Inicio
+{% endblock %}
+
+{% block contenido %}
+
+<h2>Carta del restaurante</h2>
+
+<p>Precio promedio: ${{ promedio }}</p>
+<p>Cantidad vegetarianos: {{ vegetarianos }}</p>
+
+{% for p in platos %}
+
+<div class="card">
+    <h3>{{ p.nombre|upper }}</h3>
+    <p>Categoría: {{ p.categoria|lower }}</p>
+    <p>Precio: ${{ p.precio }}</p>
+
+    <a href="{% url 'restaurante:detalle' p.id %}">
+ detalle
+    </a>
+</div>
+
+{% empty %}
+
+<p>No hay platos disponibles</p>
+
+{% endfor %}
+
+{% endblock %}

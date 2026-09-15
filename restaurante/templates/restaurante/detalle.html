@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Detalle
+{% endblock %}
+
+{% block contenido %}
+
+<h2>{{ plato.nombre }}</h2>
+
+<p>ID: {{ plato.id }}</p>
+<p>Categoría: {{ plato.categoria }}</p>
+<p>Precio: ${{ plato.precio }}</p>
+<p>Tiempo: {{ plato.tiempo }} minutos</p>
+<p>Picante: {{ plato.picante|yesno:"Si,No" }}</p>
+<p>Vegetariano: {{ plato.vegetariano|yesno:"Si,No" }}</p>
+<p>{{ plato.descripcion }}</p>
+
+<hr>
+
+<p>Precio con propina: ${{ precio_propina }}</p>
+<p>Etiqueta: {{ etiqueta }}</p>
+
+<a href="{% url 'restaurante:inicio' %}">
+al inicio
+</a>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+Primera consulta: 
+haz que los platos aparezcan en orden segun lo solicitado
+
+Segunda consulta: 
+
+haz que en la empanada de queso aparezca la siguiente descripcion "Tres empanadas fritas de masa casera rellenas con queso mantecoso."
